@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+:root {
+  --overlay-color: #28afe3;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.showcase {
+  display: flex;
+  padding: 100px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  z-index: 2;
+  transition: 0.5s;
+}
+.showcase.active {
+  right: 300px;
+}
+.showcase header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 100px 100px;
+  z-index: 1000;
+  align-items: center;
+}
+.logo {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.toggle {
+  cursor: pointer;
+}
+.toggle2 {
+  cursor: pointer;
+  display: none;
+}
+.showcase .ved {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--overlay-color);
+  mix-blend-mode: overlay;
+}
+.text {
+  position: relative;
+  z-index: 5;
+}
+.text h2 {
+  font-size: 4em;
+  font-weight: 800;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h3 {
+  font-size: 2em;
+  font-weight: 600;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p {
+  font-size: 1.1em;
+  font-weight: 400;
+  max-width: 700px;
+  line-height: 1.5em;
+  letter-spacing: 3px;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+.text a {
+  display: inline-block;
+  font-size: 1em;
+  background: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #111;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover {
+  letter-spacing: 6px;
+}
+
+.media {
+  position: absolute;
+  bottom: 20px;
+  z-index: 10px;
+  display: flex;
+  justify-content: center;
+}
+.media a {
+  color: #fff;
+  display: inline-block;
+  transform: scale(0.8);
+  margin-right: 20px;
+  transition: 0.5s;
+}
+.media a:hover {
+  transform: scale(0.8) translateY(-20px);
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul {
+  position: relative;
+  list-style: none;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-size: 24px;
+  color: #111;
+}
+.menu ul li a:hover {
+  color: var(--overlay-color);
+}
+
+@media (max-width: 798px) {
+  .showcase,
+  .showcase header {
+    padding: 40px;
+  }
+
+  .text h2 {
+    font-size: 2em;
+  }
+  .text h3 {
+    font-size: 1em;
+  }
+}
